@@ -1,9 +1,9 @@
-// create our angular module and inject firebase
+// create our angular module so we can inject firebase
 angular.module('scheduleApp', ['firebase'])
 
 //create our main controller and get access to firebase
 .controller('mainController', function($scope, $firebase) {
-    // connect to firebase
+    // let's connect to firebase --> note: this is my firebase project you'll want to add your firebase link and then /days to the end
     var ref = new Firebase("https://my-first-project-8e440.firebaseio.com/days");
     var fb = $firebase(ref);
     
